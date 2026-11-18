@@ -59,7 +59,8 @@ const CATS = [
 const first = S.nome.split(" ")[0];
 const initials = S.nome.split(" ").filter((w,i,a)=>i===0||i===a.length-1).map(w=>w[0]).join("").toUpperCase();
 $("hname").textContent = first;
-["av1","av2"].forEach(i=>{const a=$(i);a.textContent=initials;const im=new Image();im.alt=S.nome;im.onload=()=>{a.textContent="";a.appendChild(im)};im.src=S.foto});
+["av1","av2"].forEach(i=>{const a=$(i);a.textContent=initials;const im=new Image();im.alt=S.nome;im.onload=()=>{a.textContent="";a.appendChild(im)};im.src=FOTO_B64});
+$("cPhoto").src=FOTO_B64;
 $("sName").textContent=S.nome; $("sCurso").textContent=S.curso+" · "+S.grau;
 $("sPer").textContent=S.periodo; $("sTurno").textContent=S.turno;
 $("cName").textContent=S.nome; $("cCurso").textContent=S.curso.toUpperCase();
