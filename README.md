@@ -1,31 +1,43 @@
 # Unifatec · Portal do Aluno (protótipo)
 
-Protótipo **mobile-first** de portal universitário, feito em um único `index.html` (HTML + CSS + JS), sem backend.
+Protótipo **mobile-first** de portal universitário em HTML/CSS/JS puro, sem backend.
+
+## Estrutura
+
+```
+unifatec-portal/
+├── index.html        # estrutura das telas e barra de abas
+├── css/style.css     # visual (cores, carteirinha, abas, painéis)
+├── js/
+│   ├── data.js       # DADOS DO ALUNO (edite aqui)
+│   └── app.js        # navegação, aba Tudo, painéis, carteirinha/QR
+├── assets/
+│   └── pietra.jpg    # foto do aluno
+├── .nojekyll         # necessário para o GitHub Pages
+└── README.md
+```
 
 ## Telas
 
-- **Início** – resumo do aluno, acesso rápido, aulas do dia e avisos
-- **Tudo** – todos os serviços organizados por categoria, com busca
-- **Carteirinha** – carteirinha digital (frente/verso), QR code e relógio ao vivo
+- **Início** – resumo do aluno, acesso rápido, aulas do dia, avisos
+- **Tudo** – todos os serviços por categoria, com busca
+- **Carteirinha** – frente/verso, QR code e relógio ao vivo
 - **Perfil** – dados do aluno
 
-A foto do aluno fica em `assets/pietra.jpg` (usada na carteirinha, no Início e no Perfil).
+## Como editar
 
-## Aluno de teste
-
-Pietra Soares de Oliveira · Biomedicina. Os dados ficam no objeto `S` no início do `<script>` do `index.html`; é só editar lá.
+- Trocar aluno, curso, CPF, foto: `js/data.js`
+- Adicionar serviço na aba Tudo: lista `CATS` em `js/app.js`
+- Mudar cores: variáveis `:root` em `css/style.css`
 
 ## Rodar
 
-Abra o `index.html` no navegador (de preferência no celular ou no modo mobile do DevTools). Para publicar no GitHub Pages: *Settings → Pages → Deploy from branch → `main` / root*.
+Abra o `index.html` no navegador (modo mobile do DevTools). GitHub Pages: *Settings → Pages → `main` / root*.
 
 ## Aviso
 
-Projeto de demonstração. Dados fictícios, sem validade como documento oficial. O logo é carregado do site da instituição; substitua por um arquivo local em `assets/` se necessário.
+Projeto de demonstração, dados fictícios, sem validade como documento oficial. O logo é carregado do site da instituição.
 
 ## Próximos passos
 
-- Backend/autenticação (login por RA + senha)
-- Validação real do QR code da carteirinha
-- Foto do aluno via upload
-- Integração com notas, financeiro e frequência
+Backend e login por RA, validação real do QR, upload de foto, integração com notas/financeiro/frequência.
